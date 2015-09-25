@@ -3,6 +3,7 @@
  */
 $(function () {
 
+	var endPer=$('.progressbar').attr('data-perc');
 	$('.progressbar').each(function () {
 		var t = $(this),
 			dataperc = t.attr('data-perc'),
@@ -34,6 +35,9 @@ $(function () {
 			var length = t.find('.bar').css('width'),
 				perc = Math.round(parseInt(length) / 5.56),
 				labelpos = (parseInt(length) - 2);
+			if(perc>=endPer){
+				clearInterval(interval);
+			}
 			var rgba_s = "rgba(" + (r_c_s - Math.round(perc * (r_c_s - r_c_e) / 100)) + "," + (g_c_s + Math.round(perc * (g_c_e - g_c_s) / 100)) + "," + (b_c_s - Math.round(perc * (b_c_s - b_c_e) / 100)) + "," + a_c_s + ")";
 			var rgba_e = "rgba(" + (r_c_s_2 - Math.round(perc * (r_c_s_2 - r_c_e_2) / 100)) + "," + (g_c_s_2 + Math.round(perc * (g_c_e_2 - g_c_s_2) / 100)) + "," + (b_c_s_2 - Math.round(perc * (b_c_s_2 - b_c_e_2) / 100)) + "," + a_c_s_2 + ")";
 			t.find('.bar').css('background', "linear-gradient(to bottom, " + rgba_s + " 0%," + rgba_e + " 100%)");
@@ -45,6 +49,6 @@ $(function () {
 		}
 
 		perc();
-		setInterval(perc, 0);
+		var interval=setInterval(perc, 0);
 	});
 });
