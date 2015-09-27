@@ -1,0 +1,173 @@
+html {
+    background-color: rgb(30, 87, 153);
+}
+
+div#bubbleArea {
+    width: 300px;
+    height: 700px;
+    margin: 0 auto;
+    position: relative;
+}
+
+div#bubbleArea span.glow {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: block;
+    border-radius: 200px;
+    animation: bluePulse 2s infinite;
+}
+
+@keyframes bluePulse {
+    from {
+        -webkit-box-shadow: 0 0 30px #54a9ed;
+    }
+    50% {
+        -webkit-box-shadow: 0 0 80px #69abdf;
+    }
+    to {
+        -webkit-box-shadow: 0 0 30px #54a9ed;
+    }
+}
+
+div#bubbleArea span.bubble {
+    display: block;
+    background: #FFF;
+    background: -moz-radial-gradient(center, ellipse cover, rgba(105, 171, 223, 0.2) 0%, #54a9ed 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(105, 171, 223, 0.2)), color-stop(100%, #54a9ed));
+    /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(105, 171, 223, 0.2) 0%, #54a9ed 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, rgba(105, 171, 223, 0.2) 0%, #54a9ed 100%);
+    /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, rgba(105, 171, 223, 0.2) 0%, #54a9ed 100%);
+    /* IE10+ */
+    background: radial-gradient(ellipse at center, rgba(105, 171, 223, 0.2) 0%, #54a9ed 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3369abdf', endColorstr='#54a9ed', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    width: 100px;
+    height: 100px;
+    border-radius: 200px;
+    position: absolute;
+    left: 100px;
+    bottom: 110px;
+    animation: bubbleFloat1 5s infinite;
+}
+
+@keyframes bubbleFloat1 {
+    from {
+        bottom: 110px;
+        transform: scale(0.9);
+        opacity: 0;
+        animation-timing-function: ease-in-out;
+    }
+    1% {
+        bottom: 110px;
+        transform: scale(0.3);
+        opacity: 0;
+        animation-timing-function: ease-in-out;
+    }
+    30% {
+        bottom: 110px;
+        transform: scale(0.8);
+        opacity: 1;
+        animation-timing-function: ease-in-out;
+    }
+    95% {
+        bottom: 545px;
+        transform: scale(0.3);
+        opacity: 1;
+        animation-timing-function: ease-in-out;
+    }
+    to {
+        bottom: 550px;
+        transform: scale(0.1);
+        opacity: 0;
+        animation-timing-function: ease-in-out;
+    }
+    /*99% {*/
+    /*bottom: 550px;*/
+    /*transform: scale(1);*/
+    /*opacity: 0;*/
+    /*animation-timing-function: ease-in-out;*/
+    /*}*/
+    /*to {*/
+    /*bottom: 110px;*/
+    /*transform: scale(0.9);*/
+    /*opacity: 0;*/
+    /*animation-timing-function: ease-in-out;*/
+    /*}*/
+}
+
+div#bubbleArea span.bubble2 {
+    display: block;
+    background: #FFF;
+    background: -moz-radial-gradient(center, ellipse cover, rgba(105, 171, 223, 0.2) 0%, #54a9ed 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(105, 171, 223, 0.2)), color-stop(100%, #54a9ed));
+    /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(105, 171, 223, 0.2) 0%, #54a9ed 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, rgba(105, 171, 223, 0.2) 0%, #54a9ed 100%);
+    /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, rgba(105, 171, 223, 0.2) 0%, #54a9ed 100%);
+    /* IE10+ */
+    background: radial-gradient(ellipse at center, rgba(105, 171, 223, 0.2) 0%, #54a9ed 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3369abdf', endColorstr='#54a9ed', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    width: 30px;
+    height: 30px;
+    border-radius: 60px;
+    position: absolute;
+    left: 125px;
+    bottom: 110px;
+    animation: bubbleFloat2 5s infinite;
+}
+
+@keyframes bubbleFloat2 {
+    from {
+        bottom: 110px;
+        transform: scale(1);
+        opacity: 0;
+        animation-timing-function: ease-in-out;
+    }
+    1% {
+        bottom: 110px;
+        transform: scale(0.3);
+        opacity: 0;
+        animation-timing-function: ease-in-out;
+    }
+    30% {
+        bottom: 110px;
+        transform: scale(0.9);
+        opacity: 1;
+        animation-timing-function: ease-in-out;
+    }
+    95% {
+        bottom: 650px;
+        transform: scale(0.3);
+        opacity: 1;
+        animation-timing-function: ease-in-out;
+    }
+    to {
+        bottom: 655px;
+        transform: scale(0.1);
+        opacity: 0;
+        animation-timing-function: ease-in-out;
+    }
+    /*99% {*/
+    /*bottom: 655px;*/
+    /*transform: scale(3);*/
+    /*opacity: 0;*/
+    /*animation-timing-function: ease-in-out;*/
+    /*}*/
+    /*to {*/
+    /*bottom: 110px;*/
+    /*transform: scale(1);*/
+    /*opacity: 0;*/
+    /*animation-timing-function: ease-in-out;*/
+    /*}*/
+}
