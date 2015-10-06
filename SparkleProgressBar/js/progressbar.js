@@ -5,9 +5,10 @@ $(function () {
 
 	var endPer = $('.progressbar').attr('data-perc');
 	$('.progressbar').each(function () {
+		var title_text=$(".title span");
 		var t = $(this),
 			dataperc = t.attr('data-perc'),
-			barperc = Math.round(dataperc * 5.56);
+			barperc = Math.round(dataperc * 6.78);
 		t.find('.bar').animate({width: barperc}, dataperc * 25);
 		t.find('.label').append('<div class="perc"></div>');
 
@@ -33,7 +34,7 @@ $(function () {
 
 		function perChange() {
 			var length = t.find('.bar').css('width'),
-				perc = Math.round(parseInt(length) / 5.56),
+				perc = Math.round(parseInt(length) / 6.78),
 				labelpos = (parseInt(length) - 2);
 			if (perc >= endPer) {
 				//window.cancelAnimationFrame(requestFn);
@@ -49,7 +50,7 @@ $(function () {
 			t.find('.label').css('background', "linear-gradient(to bottom, " + rgba_s + " 0%," + rgba_e + " 100%)");
 			t.find('.label').css('box-shadow', "0px 0px 10px 2px " + rgba_s + ",inset 0px 1px 0px 0px rgba(255, 255, 255, 0.45),inset 1px 0px 0px 0px rgba(255, 255, 255, 0.25),inset -1px 0px 0px 0px rgba(255, 255, 255, 0.25)");
 			t.find('.perc').text(perc + '%');
-
+			title_text.text(perc + '%');
 		}
 
 		//perc();
